@@ -12,3 +12,5 @@ services:
 script:
 - docker build -t hrazaf6/gowebapp:$TRAVIS_COMMIT .
 - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD && docker push hrazaf6/gowebapp:$TRAVIS_COMMIT
+- chmod +x deploy.sh
+- ./deploy.sh
